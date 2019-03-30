@@ -113,7 +113,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    uint16_t sinv = 4096 * ((sin(phi) + 1.0) / 2.0);
+    uint16_t sinv = 4095 * ((sin(phi) + 1.0) / 2.0);
     if (HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sinv) != HAL_OK)
     {
       Error_Handler();
