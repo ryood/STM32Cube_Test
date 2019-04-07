@@ -111,7 +111,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   generateSineWave();
   HAL_TIM_Base_Start(&htim6);
-  HAL_DAC_Start(&hdac,DAC_CHANNEL_1);
   HAL_DAC_Start_DMA(&hdac, DAC_CHANNEL_1, (uint32_t*)sine_wave_array, SINE_TABLE_SIZE, DAC_ALIGN_12B_R);
   /* USER CODE END 2 */
 
