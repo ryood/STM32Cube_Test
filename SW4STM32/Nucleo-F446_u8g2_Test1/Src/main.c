@@ -146,7 +146,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  HAL_Delay(100);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -173,6 +173,7 @@ int main(void)
       u8g2_DrawStr(&u8g2, 0, 15, "Hello World!");
       u8g2_DrawCircle(&u8g2, 64, 40, 10, U8G2_DRAW_ALL);
     } while (u8g2_NextPage(&u8g2));
+    HAL_Delay(1);
   }
   /* USER CODE END 3 */
 }
